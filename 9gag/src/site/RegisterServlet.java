@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class RegisterServlet
  */
 @WebServlet("/RegisterServlet")
 
@@ -26,11 +26,12 @@ public class RegisterServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email = req.getParameter("email");
+		String name = req.getParameter("name");
 		String password = req.getParameter("password");
 		try {
 			connection = connectToDataBase();
 			
-			write(email, password);
+			write(email, name, password);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -47,11 +48,12 @@ public class RegisterServlet extends HttpServlet {
 	    return  DriverManager.getConnection(url, "root", "1234");
 	}
 	
-	public void write(String email, String password){
-		String query = "INSERT INTO 9gag.profiles (email, password) values (?, ?)";
+	public void write(String email, String name, String password){
+		String query = "INSERT INTO 9gag.profiles (email, name,  password) values (?,?, ?)";
 		try {
 			PreparedStatement prep = connection.prepareStatement(query,PreparedStatement.RETURN_GENERATED_KEYS);
 			prep.setString(1, email);
+			prep.setString(1, name);
 			prep.setString(2, password);
 			prep.execute();
 			connectToDataBase().close();

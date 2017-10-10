@@ -35,7 +35,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Trending</a>
+              <a class="nav-link" href="#">Trending</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="logInServlet.jsp">Log In</a>
@@ -56,17 +56,11 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-          <h1 class="my-4">Page Heading
-            <small>Secondary Text</small>
-          </h1>
-
           <!-- Blog Post -->
           <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+            <img class="card-img-top" src="C:\Users\denit\ittalents\myProject\FirstWebProject\9gag\am2GnL2_700b.jpg" alt="Card image cap">
             <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+              <h2 class="card-title">This is not my work but is relevant if you are bad programmer.</h2>
             </div>
             <div class="card-footer text-muted">
               Posted on January 1, 2017 by
@@ -150,6 +144,28 @@
                     <li>
                       <a href="#">WTF</a>
                     </li>
+                    
+                    <li>
+                      <a href="#">Savage</a>
+                    </li>
+                    <li>
+                      <a href="#">GIF</a>
+                    </li>
+                    <li>
+                      <a href="#">Sport</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">Horror</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">Science</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">IMadeDis</a>
+                    </li>
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -160,20 +176,38 @@
                     <li>
                       <a href="#">Relationship</a>
                     </li>
+                    <li>                    
+                      <a href="#">Ask9GAG</a>
+                    </li>
+                    
                     <li>
                       <a href="#">Awesome</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">Gaming</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">MovieTV</a>
+                    </li>
+                    <li>
+                      <a href="#">Comic</a>
+                    </li>
+                    <li>
+                      <a href="#">GirlyThings</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">Animals</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">School</a>
                     </li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Side Widget</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
             </div>
           </div>
 
@@ -188,7 +222,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; 9GAG 2017</p>
       </div>
       <!-- /.container -->
     </footer>
