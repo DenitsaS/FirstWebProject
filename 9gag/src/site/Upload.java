@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class Upload implements IString {
+public class Upload implements IString, ILike, IConnection{
 
 	private int uploadID;
 	private String description;
@@ -48,11 +48,6 @@ public class Upload implements IString {
 		}
 	}
 
-	public Connection connectToDataBase() throws ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.jdbc.Driver");
-		String url = "jdbc:mysql://localhost:3306/9gag";
-		return DriverManager.getConnection(url, "root", "1234");
-	}
 
 	public void write(String description, String filePath, long userId, boolean isSafeForWork, Category category,
 			boolean isPublic) {
@@ -77,7 +72,7 @@ public class Upload implements IString {
 
 	public void like() {
 		this.likes++;
-		String query = "INSERT INTO upload (likes) values (?)";
+		String query = "UPDATE upload SET likes = ";
 		try {
 			PreparedStatement prep = connectToDataBase().prepareStatement(query,
 					PreparedStatement.RETURN_GENERATED_KEYS);
@@ -91,9 +86,9 @@ public class Upload implements IString {
 		}
 	}
 
-	public void disLike() {
+	public void dislike() {
 		this.likes--;
-		String query = "INSERT INTO upload (likes) values (?)";
+		String query ="UPDATE upload SET likes = ?";
 		try {
 			PreparedStatement prep = connectToDataBase().prepareStatement(query,
 					PreparedStatement.RETURN_GENERATED_KEYS);
